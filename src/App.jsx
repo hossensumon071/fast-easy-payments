@@ -1,6 +1,5 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
-import Clients from './components/Clients'
 import About from './components/About'
 import Solutions from './components/Solutions'
 import Pos from './components/Pos'
@@ -19,7 +18,6 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <Clients />
         <About />
         <Solutions />
         <Pos />
