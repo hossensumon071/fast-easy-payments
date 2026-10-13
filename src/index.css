@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply overflow-x-hidden bg-cream font-sans text-ink antialiased;
+  }
+  em {
+    font-weight: 500;
+  }
+  section[id] {
+    scroll-margin-top: 84px;
+  }
+  :focus-visible {
+    outline: 2px solid #e0d08c;
+    outline-offset: 3px;
+  }
+}
+
+/* small helpers Tailwind has no built-in class for */
+@layer utilities {
+  .bg-dots {
+    background-image: radial-gradient(rgba(224, 208, 140, 0.35) 1px, transparent 1.3px);
+    background-size: 7px 7px;
+  }
+  .mask-b-35 {
+    -webkit-mask-image: linear-gradient(180deg, transparent 35%, #000 100%);
+    mask-image: linear-gradient(180deg, transparent 35%, #000 100%);
+  }
+  .mask-b-55 {
+    -webkit-mask-image: linear-gradient(180deg, transparent 55%, #000 100%);
+    mask-image: linear-gradient(180deg, transparent 55%, #000 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
